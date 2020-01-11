@@ -1,3 +1,7 @@
+html body{
+  background: #263238;
+}
+
 .App {
   text-align: center;
 }
@@ -19,4 +23,80 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.input {
+  padding: 16px;
+  font-size: 30px;
+  width: 80%;
+  display: block;
+  margin: 60px auto;
+}
+
+h1 {
+  color: #fcd93b;
+  font-size: 87px;
+  margin: 60px;
+}
+
+.name {
+  font-size: 30px;
+  padding: 20px 0;
+  width: 50%;
+  float: left;
+  color: #E6B89C;
+}
+
+.highlight {
+  color: #000000;
+  background: #E6B89C;
+  padding: 5px;
+}
+
+.pokemon-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.pokemons-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.marketing {
+  background: linear-gradient(transparent 0%, black 80%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10vh;
+  text-align: left;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.marketing > span {
+  font-size: 4rem;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.fps {
+  zoom: 2;
+  position: relative;
+  width: 120px;
+  height: 40px;
+}
+
+.min-fps {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  right: 110px;
+  bottom: 12px;
 }

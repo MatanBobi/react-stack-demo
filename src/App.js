@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PokemonsList from "./components/PokemonsList";
+import SearchBox from './components/SearchBox';
+import {sendAnalyticsPing} from './helpers/utils';
+import Description from './components/Description';
+import Header from './components/Heder';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    state = {
+        inputValue: ''
+    };
+
+    onInputChange = (value) => {
+        this.setState({inputValue: value});
+        sendAnalyticsPing(value);
+    };
+
+    render(){
+        const {pokemons, inputValue} = this.state;
+
+        return (
+            <div className="App">
+                <Header>Pokédex</Header>
+                <SearchBox inputValue={inputValue} onChange={this.onInputChange}/>
+                <PokemonsList pokemons={pokemons} searchValue={inputValue}/>
+                <Description/>
+            </div>
+        )
+    }
 }
 
 export default App;
