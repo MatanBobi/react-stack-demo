@@ -11,9 +11,9 @@ class App extends React.Component {
     inputValue: ''
   }
 
-  onInputChange = (value) => {
-    this.setState({ inputValue: value })
-    sendAnalyticsPing(value)
+  onInputChange = (inputValue) => {
+    this.setState({ inputValue })
+    sendAnalyticsPing(inputValue)
   }
 
   render () {
