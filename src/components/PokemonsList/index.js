@@ -4,8 +4,7 @@ import Spinner from '../Spinner'
 
 class PokemonsList extends PureComponent {
   state = {
-    pokemons: [],
-    isFetching: true
+    pokemons: []
   }
 
   getPokemon = () => {
@@ -20,8 +19,8 @@ class PokemonsList extends PureComponent {
 
   render () {
     const { searchValue } = this.props
-    const { pokemons, isFetching } = this.state
-    return isFetching ? <Spinner/> : (
+    const { pokemons } = this.state
+    return (
       <div className="pokemons-list">
         {pokemons.map(pokemon => (
           <Pokemon name={pokemon.name} searchValue={searchValue} key={pokemon.name}/>
