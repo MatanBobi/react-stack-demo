@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import Pokemon from '../Pokemon'
-import Spinner from '../Spinner'
 
 class PokemonsList extends PureComponent {
   state = {
