@@ -21,7 +21,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header>Pokédex</Header>
+        <Header>Pokémons</Header>
         <SearchBox inputValue={inputValue} onChange={this.onInputChange}/>
         <PokemonsList searchValue={inputValue}/>
         <Description/>
