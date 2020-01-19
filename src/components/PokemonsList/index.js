@@ -8,7 +8,7 @@ class PokemonsList extends PureComponent {
 
   getPokemon = () => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=200').then(response => response.json()).then(data => {
-      this.setState({ pokemons: data.results, isFetching: false })
+      this.setState({ pokemons: data.results })
     })
   }
 
