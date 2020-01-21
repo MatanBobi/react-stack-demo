@@ -1,3 +1,5 @@
+Some of this code is inspired by philipp-spiess's example here: https://github.com/philipp-spiess/scheduletron3000
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
